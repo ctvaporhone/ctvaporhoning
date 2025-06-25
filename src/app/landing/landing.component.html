@@ -1,0 +1,129 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<body>
+    <div class="toolbar">
+        <div class="toolbar-label"><img class="toolbar-label" src="images/logo.png" alt="CT Vapor Honing"></div>
+        <button mat-button class="menu-button" (click)="menu()"><span>
+          <div class="mobile-menu">
+            <mat-icon fontIcon="menu"></mat-icon>
+          </div>
+          </span></button>
+        <div class="toolbar-button-container">
+            <button mat-button class="toolbar-button" onClick="document.getElementById('first').scrollIntoView();">Services</button>
+            <button mat-button class="toolbar-button" onClick="document.getElementById('second').scrollIntoView();">Photos</button>
+            <button mat-button class="toolbar-button"  onClick="document.getElementById('third').scrollIntoView();">About</button>
+            <button mat-button class="toolbar-button"  onClick="document.getElementById('forth').scrollIntoView();">Contact</button>
+        </div>
+        <div class="toolbar-button-container-mobile" *ngIf="menuOpen">
+          <button mat-button (click)="menu()" onClick="document.getElementById('first').scrollIntoView();">Services</button>
+          <button mat-button (click)="menu()" onClick="document.getElementById('second').scrollIntoView();">Photos</button>
+          <button mat-button (click)="menu()" onClick="document.getElementById('third').scrollIntoView();">About</button>
+          <button mat-button (click)="menu()" onClick="document.getElementById('forth').scrollIntoView();">Contact</button>
+        </div>
+    </div>
+    
+    <div class="header">
+        <img class="header-image" src="images/header2.jpg" alt="">
+    </div>
+
+    <div id="first" class="what">
+      <div class="what-content">
+        <h2>What is Vapor Honing?</h2>
+        Vapor honing is a wet blasting process that uses water, abrasive media, and air to clean and refine surfaces. It’s ideal for restoring parts without causing damage, leaving a smooth, satin-like finish suitable for a wide range of materials.
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="services-content">
+        <h2>What Can We Vapor Hone?</h2>
+      </div>
+      
+      <div class="service-container">
+        <mat-card class="service-card">
+          <i class="fa-solid fa-car"></i>
+          <p>Automotive parts</p>
+        </mat-card>
+        <mat-card class="service-card">
+          <i class="fa-solid fa-motorcycle"></i>
+          <p>Vintage motorcycles</p>
+        </mat-card>
+        <mat-card class="service-card">
+          <i class="fa-solid fa-bore-hole"></i>
+          <p>Machined Parts</p>
+        </mat-card>
+        <mat-card class="service-card">
+          <i class="fa-solid fa-rocket"></i>
+          <p>Aerospace parts</p>
+        </mat-card>
+      </div>
+
+      <div class="services-content">
+        <h2>And more...</h2>
+      </div>
+
+    </div>
+
+    <div id="second" class="photos">
+        
+        <div class="photo-grid">
+            <h2>See our work</h2>
+            <mat-grid-list [cols]="gridCols" rowHeight="2:1">
+                <mat-grid-tile class="photo-grid-cell"><img id="img1" class="photo-grid-image" src="images/intercooler.jpg" (click)="openImageModal($event)" alt=""> </mat-grid-tile>
+                <mat-grid-tile class="photo-grid-cell"><img id="img1" class="photo-grid-image" src="images/block.jpg" (click)="openImageModal($event)" alt=""></mat-grid-tile>
+                <mat-grid-tile class="photo-grid-cell"><img id="img3" class="photo-grid-image" src="images/cylinder.jpg" (click)="openImageModal($event)" alt=""></mat-grid-tile>
+                <mat-grid-tile class="photo-grid-cell"><img id="img4" class="photo-grid-image" src="images/mzr.jpg" (click)="openImageModal($event)" alt=""></mat-grid-tile>
+                <mat-grid-tile class="photo-grid-cell"><img id="img5" class="photo-grid-image" src="images/turbo.jpg" (click)="openImageModal($event)" alt=""></mat-grid-tile>
+                <mat-grid-tile class="photo-grid-cell"><img id="img6" class="photo-grid-image" src="images/plate.JPG" (click)="openImageModal($event)" alt=""></mat-grid-tile>
+                <mat-grid-tile class="photo-grid-cell"><img id="img7" class="photo-grid-image" src="images/manifold.jpg" (click)="openImageModal($event)" alt=""></mat-grid-tile>
+                <mat-grid-tile class="photo-grid-cell"><img id="img8" class="photo-grid-image" src="images/valve.jpg" (click)="openImageModal($event)" alt=""></mat-grid-tile>
+                <mat-grid-tile class="photo-grid-cell"><img id="img9" class="photo-grid-image" src="images/oilpan.jpg" (click)="openImageModal($event)" alt=""></mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+
+    <div id="third" class="about">
+        
+      <div class="about-text">
+          <h2>About</h2>
+          What began as a hobby restoring old tools with a small, entry-level sandblasting cabinet quickly evolved into something more. Though starting a business had long been a goal, we weren’t sure where to begin—until we discovered vapor blasting. After extensive research, the advantages became clear: superior surface finishes, improved operator safety, and a more environmentally friendly process compared to traditional dry blasting. Today, we’re a fully insured LLC operating the largest commercially available American-made wet blasting cabinet on the market.
+      </div> 
+    </div>
+    
+    <div id="forth" class="contact">
+      <div class="contact-container">
+        <mat-card class="contact-card">
+          <h2>Connecticut Vapor Honing</h2>
+          <p>Premium vapor honing solutions: specializing in vapor blasting and wet blasting. Ideal for applications such as automotive restoration, motorcycle and ATV components, antique refurbishing, and a wide range of industrial parts.</p>
+        </mat-card>
+
+        <mat-card class="contact-card">
+          <h2>Contact Us</h2>
+          <div class="contact-line">
+            <mat-icon fontIcon="call"></mat-icon>
+            <span>(860) 808-6256</span>
+          </div>
+          <div class="contact-line">
+            <mat-icon fontIcon="email"></mat-icon>
+            <span>mikemuszynski.ctvaporhoning&#64;gmail.com</span>
+          </div>
+          <div class="contact-line">
+            <i class="fab fa-square-instagram"></i>
+            <span>connecticutvaporhoning</span>
+          </div>
+          <div class="contact-line">
+            <i class="fab fa-facebook-f"></i>
+            <span>connecticutvaporhoning</span>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="footer">
+      Copyright © 2025 Connecticut Vapor Honing
+    </div>
+    <app-image-modal #imageModal></app-image-modal>
+</body>
